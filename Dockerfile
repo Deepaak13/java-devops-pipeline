@@ -1,9 +1,9 @@
-FROM eclipse-temurin:17-jdk
+FROM openjdk:17
 
 WORKDIR /app
 
-COPY target/*.jar /app/app.jar
+COPY target/java-devops-1.0.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
